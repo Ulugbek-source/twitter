@@ -1,7 +1,7 @@
-const Input = ({ placeholder, name, classList, text }) => {
+const Input = ({ placeholder, name, classList, type = 'text' }) => {
 	return (
 		<input
-			type={text}
+			type={type}
 			className={`${classList}`}
 			placeholder={placeholder}
 			name={name}

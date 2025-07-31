@@ -27,6 +27,7 @@ const Login = () => {
 							}
 						/>
 						<Input
+							type='password'
 							placeholder={'Password'}
 							name={'password'}
 							classList={
