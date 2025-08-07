@@ -6,7 +6,7 @@ const DashboardRoutes = () => {
 	return (
 		<div className='containers flex justify-between'>
 			<Navbar />
-			<div className='w-[60%] h-[100vh] overflow-y-auto border-x-[1px] border-[#c8d8d8]'>
+			<div className='w-[60%] relative h-[100vh] overflow-y-auto border-x-[1px] border-[#c8d8d8]'>
 				<Routes>
 					{routeList.map(item => (
 						<Route key={item.id} path={item.path} element={item.element} />

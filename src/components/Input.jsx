@@ -1,12 +1,25 @@
-const Input = ({ placeholder, name, classList, type = 'text' }) => {
+const Input = ({
+	placeholder,
+	name,
+	classList = '',
+	type = 'text',
+	icon = null,
+}) => {
 	return (
-		<input
-			required
-			type={type}
-			className={`${classList}`}
-			placeholder={placeholder}
-			name={name}
-		/>
+		<div className='relative'>
+			{icon && (
+				<span className='absolute left-3 top-[14px] text-gray-400'>{icon}</span>
+			)}
+			<input
+				required
+				type={type}
+				name={name}
+				placeholder={placeholder}
+				className={`border py-[15px] rounded ${
+					icon ? 'pl-10' : ''
+				} ${classList}`}
+			/>
+		</div>
 	)
 }
 

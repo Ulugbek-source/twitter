@@ -19,6 +19,8 @@ import {
 	NotificationIcon,
 	ProfileIcon,
 } from '../assets/icons'
+import { Suspense } from 'react'
+import PageLoading from './PageLoading'
 export const routeList = [
 	{
 		id: 1,
@@ -26,7 +28,11 @@ export const routeList = [
 		title: 'Home',
 		icon: <HomeIcon />,
 		activeIcon: <HomeIcon active={true} />,
-		element: <Home />,
+		element: (
+			<Suspense fallback={<PageLoading isLoading={true} />}>
+				<Home />
+			</Suspense>
+		),
 		children: [],
 	},
 	{
